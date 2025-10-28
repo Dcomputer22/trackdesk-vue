@@ -73,25 +73,25 @@ const handleSubmitForm = () => {
 </script>
 
 <template>
-  <div
+  <section
     class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 px-4 py-12"
   >
-    <div class="max-w-md w-full">
-      <div class="bg-white rounded-2xl shadow-2xl p-8">
-        <div class="text-center mb-8">
+    <section class="max-w-md w-full">
+      <section class="bg-white rounded-2xl shadow-2xl p-8">
+        <section class="text-center mb-8">
           <h1 class="text-3xl font-bold text-gray-900 mb-2">Create Account</h1>
           <p class="text-gray-600">Become a member of trackDesk today</p>
-        </div>
+        </section>
 
-        <div
+        <section
           v-if="errors.general"
           class="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg"
         >
           <p class="text-sm text-red-600">{{ errors.general }}</p>
-        </div>
+        </section>
 
         <form @submit.prevent="handleSubmitForm" class="space-y-5">
-          <div>
+          <section>
             <label
               for="name"
               class="block text-sm font-medium text-gray-700 mb-2"
@@ -112,9 +112,9 @@ const handleSubmitForm = () => {
             <p v-if="errors.name" class="mt-1 text-sm text-red-600">
               {{ errors.name }}
             </p>
-          </div>
+          </section>
 
-          <div>
+          <section>
             <label
               for="email"
               class="block text-sm font-medium text-gray-700 mb-2"
@@ -135,9 +135,9 @@ const handleSubmitForm = () => {
             <p v-if="errors.email" class="mt-1 text-sm text-red-600">
               {{ errors.email }}
             </p>
-          </div>
+          </section>
 
-          <div>
+          <section>
             <label
               for="password"
               class="block text-sm font-medium text-gray-700 mb-2"
@@ -158,9 +158,9 @@ const handleSubmitForm = () => {
             <p v-if="errors.password" class="mt-1 text-sm text-red-600">
               {{ errors.password }}
             </p>
-          </div>
+          </section>
 
-          <div>
+          <section>
             <label
               for="confirmPassword"
               class="block text-sm font-medium text-gray-700 mb-2"
@@ -181,7 +181,7 @@ const handleSubmitForm = () => {
             <p v-if="errors.confirmPassword" class="mt-1 text-sm text-red-600">
               {{ errors.confirmPassword }}
             </p>
-          </div>
+          </section>
 
           <button
             type="submit"
@@ -201,16 +201,16 @@ const handleSubmitForm = () => {
             Sign in
           </router-link>
         </p>
-      </div>
+      </section>
 
-      <div class="text-center mt-6">
+      <section class="text-center mt-6">
         <router-link
           to="/"
           class="text-white hover:text-purple-100 transition text-sm"
         >
           ← Back to Home
         </router-link>
-      </div>
-    </div>
-  </div>
+      </section>
+    </section>
+  </section>
 </template>
